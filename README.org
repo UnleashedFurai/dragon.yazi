@@ -1,0 +1,39 @@
+* dragon.yazi
+
+a simple [[https://github.com/sxyazi/yazi][yazi]] plugin that provides currently-selected files to [[https://github.com/mwh/dragon][dragon]] for basic
+drag-and-drop support.
+
+** features
+
+- drag files to/from folder
+
+** requirements
+
+- [[https://github.com/sxyazi/yazi][yazi]] v##
+- [[https://github.com/mwh/dragon][dragon]]
+
+*** note
+
+this plugin is currently only built and tested on linux
+
+** installation
+
+#+begin_src sh
+  ya pkg add unleashedfurai/dragon
+#+end_src
+
+** configuration
+
+add the following to your =keymap.toml=
+
+#+begin_src toml
+  [[mgr.prepend_keymap]]
+  on = [ "e" ]
+  run = "plugin dragon open"
+  desc = "open selection for DnD with dragon"
+#+end_src
+
+the default behavior of this plugin invokes dragon's =--and-exit= option
+
+if you would prefer the window to stay open until explicitly closed, the
+=open_keep= command does not invoke =--and-exit= 
