@@ -50,7 +50,7 @@ return {
 	  end
 
 	  -- build dragon command
-	  local cmd = string.format("dragon %s %s", args, table.concat(files, " "))
+	  local cmd = "dragon " .. args .. " " .. table.concat(files, " ") .. " > /dev/null 2>&1"
 
 	  os.execute(cmd)
    end
