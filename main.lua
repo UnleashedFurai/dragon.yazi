@@ -1,3 +1,5 @@
+-- @since v25.5.31
+
 local function notify_error(msg)
    ya.notify({
 		 title = "dragon.yazi",
